@@ -1,7 +1,7 @@
 window.onload = () => {
-  const boardSize = 400;
+  const boardSize = 600;
   const population = 0.03;
-  const blockSize = 2;
+  const blockSize = 4;
   const board: boolean[][] = [];
 
   // Get reference to canvas
@@ -51,7 +51,7 @@ window.onload = () => {
     let neighbours: number = 0;
     for (let curRow = (row > 0) ? (row - 1) : row; curRow <= ((row < (boardSize - 1)) ? (row + 1) : row); curRow++) {
       for (let curCol = (col > 0) ? (col - 1) : col; curCol <= ((col < (boardSize - 1)) ? (col + 1) : col); curCol++) {
-        if (board[curRow][curCol]) neighbours++;
+        if (board[curRow][curCol] /*&& curRow!=row && curCol!=col*/) neighbours++;
       }
     }
     return neighbours;
