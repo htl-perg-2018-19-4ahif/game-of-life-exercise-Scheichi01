@@ -1,12 +1,12 @@
 window.onload = () => {
-  const boardSize = 600;
+  const boardSize = 200;
   const population = 0.03;
   const blockSize = 4;
   const board: boolean[][] = [];
 
   // Get reference to canvas
   const canvas = <HTMLCanvasElement>document.getElementById('canvas');
-  canvas.width = canvas.height = boardSize;
+  canvas.width = canvas.height = boardSize*blockSize;
   const ctx = canvas.getContext('2d');
   ctx.fillStyle = 'rgba(0, 0, 0, 1)';
 
